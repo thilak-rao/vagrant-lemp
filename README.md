@@ -10,5 +10,17 @@ This vagrant setup mirrors my DigitalOcean droplets. I use this as a starter for
 ### Installation
 ```` 
 git clone https://github.com/xthilakx/vagrant-lemp.git
+vagrant plugin install vagrant-hostsupdater
 vagrant up
+````
+
+#### VM Details
+````
+# Hostname: vagrantlemp.dev
+# SSH Port: 50683
+# Port 80 (Guest) > Port 80 (Host)
+# Port 50683 (Guest) > Port 50683 (Host)
+
+# Provisioning File: ./bootstrap.sh
+# Password for everything: vagrant
 ````
