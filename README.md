@@ -21,6 +21,10 @@ vagrant up
 # Port 80 (Guest) > Port 80 (Host)
 # Port 50683 (Guest) > Port 50683 (Host)
 
-# Provisioning File: ./bootstrap.sh
+# Provisioning: ./install.sh
+# ./always.sh runs after every boot. 
 # Password for everything: vagrant
 ````
+
+#### Known Issues
+*	Hostname is hard coded to vagrantlemp.dev in nginx server blocks. Use search and replace as a workaround. Defect:  $Pull requests are always appreciated.
