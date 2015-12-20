@@ -26,5 +26,8 @@ vagrant up
 # Password for everything: vagrant
 ````
 
-#### Known Issues
+##### Bypassing Browser SSL warnings
+OS X users can bypass this warning by adding ./data/certificate/vagrantlemp.dev.crt to Keychain Access. 
+
+##### Known Issues
 *	Hostname is hard coded to vagrantlemp.dev in nginx server blocks. Use search and replace as a workaround. Defect:  $Pull requests are always appreciated.

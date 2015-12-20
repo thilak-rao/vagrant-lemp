@@ -213,7 +213,10 @@ sudo chmod -R 600 /etc/nginx/ssl
 sudo openssl genrsa -out "/etc/nginx/ssl/vagrantlemp.dev.key" 2048
 sudo openssl req -new -key "/etc/nginx/ssl/vagrantlemp.dev.key" -out "/etc/nginx/ssl/vagrantlemp.dev.csr" -subj "/C=IN/ST=Thilak Rao/L=Bangalore/O=Open Source/OU=Open Source/CN=vagrantlemp.dev"
 sudo openssl x509 -req -days 365 -in "/etc/nginx/ssl/vagrantlemp.dev.csr" -signkey "/etc/nginx/ssl/vagrantlemp.dev.key" -out "/etc/nginx/ssl/vagrantlemp.dev.crt"
-
+mkdir -p /home/$USERNAME/host_data/certificate
+sudo cp /etc/nginx/ssl/vagrantlemp.dev.crt /home/$USERNAME/host_data/certificate
+sudo chown $USERNAME:$USERNAME /home/$USERNAME/host_data/certificate/vagrantlemp.dev.crt
+sudo chmod 755 /home/$USERNAME/host_data/certificate/vagrantlemp.dev.crt
 
 # Enable Server Block
 sudo ln -s /etc/nginx/sites-available/vagrantlemp.dev /etc/nginx/sites-enabled/
